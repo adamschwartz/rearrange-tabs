@@ -25,6 +25,18 @@
         "mac": "MacCtrl+Shift+Right"
       },
       "description": "Move active tab to right"
+    },
+    "move-tab-left-alternate": {
+      "suggested_key": {
+        "mac": "Command+Shift+J"
+      },
+      "description": "Move active tab to left"
+    },
+    "move-tab-right-alternate": {
+      "suggested_key": {
+        "mac": "Command+Shift+K"
+      },
+      "description": "Move active tab to right"
     }
   },
   "permissions": ["tabs"],

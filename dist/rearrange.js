@@ -1,6 +1,6 @@
 chrome.commands.onCommand.addListener(function (command) {
   var queryInfo = { currentWindow: true };
-  var move = ('move-tab-left' == command) ? -1 : 1;
+  var move = (command.indexOf('move-tab-left') > -1) ? -1 : 1;
   var tabCount = {
     all: 0,
     pinned: 0
@@ -16,7 +16,7 @@ chrome.commands.onCommand.addListener(function (command) {
 
   var calculatePosition = function (leftBoundary, rightBoundary, targetPosition) {
     if (targetPosition >= rightBoundary) {
-      // if tab is the rightmost and user tries to move it to the right, move it 
+      // if tab is the rightmost and user tries to move it to the right, move it
       // to the begining. also handles pinned tabs.
       targetPosition = leftBoundary;
     } else if (targetPosition < leftBoundary) {
